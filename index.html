@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ch-ZH">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <!-- https://unpkg.com/browse/@highlightjs/cdn-assets@11.10.0/styles/ -->
+  <link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.9.0/styles/panda-syntax-dark.min.css">
+  <title>Vue-Markdown-Template</title>
+  <meta name="description" content="Vue-Markdown-Template">
+</head>
+<body class="font-sans dark:text-white dark:bg-hex-121212">
+  <div id="app"></div>
+  <script>
+    (function () {
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+      const setting = localStorage.getItem('color-schema') || 'auto'
+      if (setting === 'dark' || (prefersDark && setting !== 'light'))
+        document.documentElement.classList.toggle('dark', true)
+    })()
+  </script>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
