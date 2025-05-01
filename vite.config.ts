@@ -33,7 +33,9 @@ export default defineConfig({
     transformer: 'lightningcss',
   },
   plugins: [
-    VueDevTools(),
+    VueDevTools({
+      launchEditor: 'windsurf',
+    }),
 
     Vue({
       include: [/\.vue$/, /\.md$/],
